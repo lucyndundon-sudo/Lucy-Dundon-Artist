@@ -1,0 +1,8 @@
+{
+  "name": "lucy-dundon-artist",
+  "version": "1.0.0",
+  "description": "Lucy Dundon Artist Website",
+  "dependencies": {
+    "stripe": "^14.0.0"
+  }
+}
