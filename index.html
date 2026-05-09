@@ -273,6 +273,18 @@
     .buy-btn:hover { background: var(--ink); color: var(--cream); }
     .buy-btn.sold { border-color: var(--line); color: var(--warm-mid); }
     .buy-btn.sold:hover { background: none; color: var(--warm-mid); }
+    .p-detail-btn {
+      font-family: var(--mono); font-size: 9px; letter-spacing: .16em;
+      text-transform: uppercase; color: var(--rust); margin: 8px 0 0;
+      cursor: pointer !important; transition: opacity .2s;
+    }
+    .p-detail-btn:hover { opacity: .7; }
+    .p-detail {
+      display: none; margin-top: 12px; padding-top: 12px;
+      border-top: 1px solid var(--line);
+    }
+    .p-detail p { font-size: 14px; font-weight: 300; color: #6A6058; line-height: 1.65; }
+    .p-detail.open { display: block; }
     .shop-foot { text-align: center; padding: 0 52px 60px; font-family: var(--mono); font-size: 9.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--warm-mid); }
     .shop-foot a { color: var(--warm-mid); text-decoration: none; border-bottom: 1px solid var(--line); transition: color .2s; }
     .shop-foot a:hover { color: var(--rust); }
@@ -368,7 +380,19 @@
       footer { padding: 44px 28px 28px; }
       .footer-bottom { flex-direction: column; }
       .footer-address { text-align: left; }
-      .shop-foot { padding-left: 28px; padding-right: 28px; }
+      .p-detail-btn {
+      font-family: var(--mono); font-size: 9px; letter-spacing: .16em;
+      text-transform: uppercase; color: var(--rust); margin: 8px 0 0;
+      cursor: pointer !important; transition: opacity .2s;
+    }
+    .p-detail-btn:hover { opacity: .7; }
+    .p-detail {
+      display: none; margin-top: 12px; padding-top: 12px;
+      border-top: 1px solid var(--line);
+    }
+    .p-detail p { font-size: 14px; font-weight: 300; color: #6A6058; line-height: 1.65; }
+    .p-detail.open { display: block; }
+    .shop-foot { padding-left: 28px; padding-right: 28px; }
     }
     @media (max-width: 560px) {
       .nav-logo { font-size: 32px; }
@@ -384,7 +408,7 @@
 
 <!-- ════ NAV ════ -->
 <nav id="mainNav">
-  <a class="nav-logo" href="#" onclick="return showPage('home')"><img src="lucy dundon signature.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" alt="Lucy Dundon" style="height:48px;width:auto;display:block;" /></a>
+  <a class="nav-logo" href="#" onclick="return showPage('home')"><img src="lucy_dundon_signature.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" alt="Lucy Dundon" style="height:48px;width:auto;display:block;" /></a>
   <ul class="nav-links">
     <li><a href="#" onclick="return showPage('home')" data-page="home" class="active">Home</a></li>
     <li><a href="#" onclick="return showPage('about')" data-page="about">About</a></li>
@@ -443,7 +467,7 @@
   <footer>
     <div class="footer-grid">
       <div>
-        <img src="lucy dundon signature.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" alt="Lucy Dundon" style="height:52px;width:auto;display:block;margin-bottom:16px;filter:brightness(0) invert(1);opacity:0.85;" />
+        <img src="lucy_dundon_signature.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" alt="Lucy Dundon" style="height:52px;width:auto;display:block;margin-bottom:16px;filter:brightness(0) invert(1);opacity:0.85;" />
         <p class="footer-ack">Lucy lives and draws inspiration from the sun-drenched edges of Gayamagal Country. She acknowledges the Traditional Custodians of these coastal lands and waters, paying her heartfelt respects to Elders past, present, and emerging.</p>
       </div>
       <div class="f-col">
@@ -501,7 +525,7 @@
 
   <footer>
     <div class="footer-grid">
-      <div><img src="lucy dundon signature.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" alt="Lucy Dundon" style="height:52px;width:auto;display:block;margin-bottom:16px;filter:brightness(0) invert(1);opacity:0.85;" /><p class="footer-ack">Lucy lives and draws inspiration from the sun-drenched edges of Gayamagal Country. She acknowledges the Traditional Custodians of these coastal lands and waters, paying her heartfelt respects to Elders past, present, and emerging.</p></div>
+      <div><img src="lucy_dundon_signature.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" alt="Lucy Dundon" style="height:52px;width:auto;display:block;margin-bottom:16px;filter:brightness(0) invert(1);opacity:0.85;" /><p class="footer-ack">Lucy lives and draws inspiration from the sun-drenched edges of Gayamagal Country. She acknowledges the Traditional Custodians of these coastal lands and waters, paying her heartfelt respects to Elders past, present, and emerging.</p></div>
       <div class="f-col"><p class="f-col-title">Navigate</p><ul><li><a href="#" onclick="return showPage('home')">Home</a></li><li><a href="#" onclick="return showPage('about')">About</a></li><li><a href="#" onclick="return showPage('gallery')">Gallery</a></li><li><a href="#" onclick="return showPage('shop')">Shop</a></li><li><a href="#" onclick="return showPage('contact')">Contact</a></li></ul></div>
       <div class="f-col"><p class="f-col-title">Connect</p><ul><li><a href="https://instagram.com/lucydundonartist" target="_blank">@lucydundonartist</a></li><li><a href="mailto:lucyndundon@gmail.com">lucyndundon@gmail.com</a></li><li><a href="https://www.lucydundonartist.com" target="_blank">lucydundonartist.com</a></li></ul></div>
     </div>
@@ -544,7 +568,7 @@
 
   <footer>
     <div class="footer-grid">
-      <div><img src="lucy dundon signature.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" alt="Lucy Dundon" style="height:52px;width:auto;display:block;margin-bottom:16px;filter:brightness(0) invert(1);opacity:0.85;" /><p class="footer-ack">Lucy lives and draws inspiration from the sun-drenched edges of Gayamagal Country. She acknowledges the Traditional Custodians of these coastal lands and waters, paying her heartfelt respects to Elders past, present, and emerging.</p></div>
+      <div><img src="lucy_dundon_signature.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" alt="Lucy Dundon" style="height:52px;width:auto;display:block;margin-bottom:16px;filter:brightness(0) invert(1);opacity:0.85;" /><p class="footer-ack">Lucy lives and draws inspiration from the sun-drenched edges of Gayamagal Country. She acknowledges the Traditional Custodians of these coastal lands and waters, paying her heartfelt respects to Elders past, present, and emerging.</p></div>
       <div class="f-col"><p class="f-col-title">Navigate</p><ul><li><a href="#" onclick="return showPage('home')">Home</a></li><li><a href="#" onclick="return showPage('about')">About</a></li><li><a href="#" onclick="return showPage('gallery')">Gallery</a></li><li><a href="#" onclick="return showPage('shop')">Shop</a></li><li><a href="#" onclick="return showPage('contact')">Contact</a></li></ul></div>
       <div class="f-col"><p class="f-col-title">Connect</p><ul><li><a href="https://instagram.com/lucydundonartist" target="_blank">@lucydundonartist</a></li><li><a href="mailto:lucyndundon@gmail.com">lucyndundon@gmail.com</a></li><li><a href="https://www.lucydundonartist.com" target="_blank">lucydundonartist.com</a></li></ul></div>
     </div>
@@ -564,8 +588,9 @@
     <div>
       <div class="filter-strip" id="shopFilters" style="margin-bottom:8px;">
         <button class="filter-btn active" onclick="filterItems('shop','all',this)">All</button>
-        <button class="filter-btn" onclick="filterItems('shop','wall-works',this)">Wall Works</button>
         <button class="filter-btn" onclick="filterItems('shop','sculptural',this)">Sculptural</button>
+        <button class="filter-btn" onclick="filterItems('shop','wall-works',this)">Wall Works</button>
+        <button class="filter-btn" onclick="filterItems('shop','cloth-stitch',this)">Cloth &amp; Stitch</button>
   
       </div>
       <p style="font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--warm-mid);text-align:right;">Each piece is one-of-a-kind</p>
@@ -661,11 +686,11 @@
 
   </div>
 
-  <p class="shop-foot">More works added regularly &nbsp;·&nbsp; <a href="#" onclick="return showPage('contact')">Enquire about a commission</a></p>
+  <p class="shop-foot">More works added regularly &nbsp;·&nbsp; <a href="#" onclick="return showPage('contact')">Get in touch</a></p>
 
   <footer>
     <div class="footer-grid">
-      <div><img src="lucy dundon signature.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" alt="Lucy Dundon" style="height:52px;width:auto;display:block;margin-bottom:16px;filter:brightness(0) invert(1);opacity:0.85;" /><p class="footer-ack">Lucy lives and draws inspiration from the sun-drenched edges of Gayamagal Country. She acknowledges the Traditional Custodians of these coastal lands and waters, paying her heartfelt respects to Elders past, present, and emerging.</p></div>
+      <div><img src="lucy_dundon_signature.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" alt="Lucy Dundon" style="height:52px;width:auto;display:block;margin-bottom:16px;filter:brightness(0) invert(1);opacity:0.85;" /><p class="footer-ack">Lucy lives and draws inspiration from the sun-drenched edges of Gayamagal Country. She acknowledges the Traditional Custodians of these coastal lands and waters, paying her heartfelt respects to Elders past, present, and emerging.</p></div>
       <div class="f-col"><p class="f-col-title">Navigate</p><ul><li><a href="#" onclick="return showPage('home')">Home</a></li><li><a href="#" onclick="return showPage('about')">About</a></li><li><a href="#" onclick="return showPage('gallery')">Gallery</a></li><li><a href="#" onclick="return showPage('shop')">Shop</a></li><li><a href="#" onclick="return showPage('contact')">Contact</a></li></ul></div>
       <div class="f-col"><p class="f-col-title">Connect</p><ul><li><a href="https://instagram.com/lucydundonartist" target="_blank">@lucydundonartist</a></li><li><a href="mailto:lucyndundon@gmail.com">lucyndundon@gmail.com</a></li><li><a href="https://www.lucydundonartist.com" target="_blank">lucydundonartist.com</a></li></ul></div>
     </div>
@@ -680,8 +705,8 @@
   <div class="contact-wrap">
     <div class="contact-info">
       <p class="section-eyebrow">Get in Touch</p>
-      <h1>Commission,<br>collaborate,<br>or say hello.</h1>
-      <p>Lucy welcomes enquiries about original works, commissions, exhibition proposals, and collaborations. Reach out directly or use the form.</p>
+      <h1>I'd love to<br>hear from you.</h1>
+      <p>Whether you'd like to find out more about a work, explore an exhibition or collaboration, or simply want to connect — Lucy would love to hear from you.</p>
       <ul class="c-details">
         <li><span class="c-label">Address</span><span>77 Bower Street, Manly NSW 2095</span></li>
         <li><span class="c-label">Email</span><a href="mailto:lucyndundon@gmail.com">lucyndundon@gmail.com</a></li>
@@ -695,10 +720,10 @@
       <div><label for="f-type">Enquiry Type</label>
         <select id="f-type">
           <option value="">— Select —</option>
-          <option>Purchase enquiry</option>
-          <option>Commission</option>
-          <option>Exhibition / collaboration</option>
-          <option>General enquiry</option>
+          <option>i'm interested in a work</option>
+          <option>exhibition or show</option>
+          <option>collaboration</option>
+          <option>just saying hello</option>
         </select>
       </div>
       <div><label for="f-msg">Message</label><textarea id="f-msg" placeholder="Tell me about your enquiry…"></textarea></div>
@@ -708,7 +733,7 @@
   </div>
   <footer>
     <div class="footer-grid">
-      <div><img src="lucy dundon signature.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" alt="Lucy Dundon" style="height:52px;width:auto;display:block;margin-bottom:16px;filter:brightness(0) invert(1);opacity:0.85;" /><p class="footer-ack">Lucy lives and draws inspiration from the sun-drenched edges of Gayamagal Country. She acknowledges the Traditional Custodians of these coastal lands and waters, paying her heartfelt respects to Elders past, present, and emerging.</p></div>
+      <div><img src="lucy_dundon_signature.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" alt="Lucy Dundon" style="height:52px;width:auto;display:block;margin-bottom:16px;filter:brightness(0) invert(1);opacity:0.85;" /><p class="footer-ack">Lucy lives and draws inspiration from the sun-drenched edges of Gayamagal Country. She acknowledges the Traditional Custodians of these coastal lands and waters, paying her heartfelt respects to Elders past, present, and emerging.</p></div>
       <div class="f-col"><p class="f-col-title">Navigate</p><ul><li><a href="#" onclick="return showPage('home')">Home</a></li><li><a href="#" onclick="return showPage('about')">About</a></li><li><a href="#" onclick="return showPage('gallery')">Gallery</a></li><li><a href="#" onclick="return showPage('shop')">Shop</a></li><li><a href="#" onclick="return showPage('contact')">Contact</a></li></ul></div>
       <div class="f-col"><p class="f-col-title">Connect</p><ul><li><a href="https://instagram.com/lucydundonartist" target="_blank">@lucydundonartist</a></li><li><a href="mailto:lucyndundon@gmail.com">lucyndundon@gmail.com</a></li><li><a href="https://www.lucydundonartist.com" target="_blank">lucydundonartist.com</a></li></ul></div>
     </div>
@@ -789,6 +814,14 @@
         item.style.display = (cat === 'all' || c.includes(cat)) ? '' : 'none';
       });
     }
+  }
+
+  // ── PRODUCT DETAIL TOGGLE ──
+  function toggleDetail(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle('open');
+    const btn = el.previousElementSibling;
+    btn.textContent = el.classList.contains('open') ? '− less detail' : '+ more detail';
   }
 
   // ── STRIPE SHOP ──
