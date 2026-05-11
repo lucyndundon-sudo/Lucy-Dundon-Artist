@@ -93,11 +93,11 @@ nav {
   line-height: 0;
   overflow: hidden;
   position: relative;
+  max-height: 80vh;
 }
 .home-hero img {
   width: 100%;
-  height: auto;
-  max-height: 100vh;
+  height: 80vh;
   object-fit: cover;
   object-position: center 45%;
   display: block;
@@ -210,11 +210,11 @@ nav {
   display: block;
   line-height: 0;
   overflow: hidden;
-  max-height: 65vh;
+  max-height: 80vh;
 }
 .about-hero-img img {
   width: 100%;
-  height: 65vh;
+  height: 80vh;
   object-fit: cover;
   object-position: center 40%;
   display: block;
@@ -880,6 +880,7 @@ footer {
   // ── CURSOR ──
   const cursor = document.getElementById('cursor');
   if (cursor) {
+    cursor.style.display = 'block';
     function moveCursor(x, y) { cursor.style.left = x+'px'; cursor.style.top = y+'px'; }
     document.addEventListener('mousemove', e => moveCursor(e.clientX, e.clientY));
     document.addEventListener('touchmove', e => moveCursor(e.touches[0].clientX, e.touches[0].clientY), {passive:true});
@@ -905,7 +906,7 @@ footer {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     target.classList.add('active');
     document.querySelectorAll('.nav-links a').forEach(a => a.classList.toggle('active', a.dataset.page === id));
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo(0, 0);
     return false;
   }
 
